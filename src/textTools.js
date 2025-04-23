@@ -1,6 +1,5 @@
 'use strict';
 
-const _ = require("lodash");
 var isString = require('./helpers').isString;
 var isNumber = require('./helpers').isNumber;
 var isObject = require('./helpers').isObject;
@@ -220,7 +219,6 @@ function normalizeTextArray(array, styleContextStack) {
 		var item = array[i];
 		var style = null;
 		var words;
-		console.log("ITEMMMM", _.cloneDeep(item));
 
 		var noWrap = getStyleProperty(item || {}, styleContextStack, 'noWrap', false);
 		if (isObject(item)) {
